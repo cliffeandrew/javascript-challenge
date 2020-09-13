@@ -15,6 +15,7 @@ var filter_btn = d3.select("#filter-btn");
 //var filters = d3.select("#filters");
 
 //--Create Event Handlers
+filter_btn.on("change", runEnter);
 filter_btn.on("click", runEnter);
 //datetime.on("click", runEnter);
 //filters.on("click", runEnter);
@@ -60,7 +61,7 @@ function runEnter() {
 }
 
 
-
+//--Refactor using Arrow Function
 data.forEach((ufosighting) => {
     var row = tableData.append("tr");
     Object.entries(ufosighting).forEach(([key, value]) => {
